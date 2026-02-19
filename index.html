@@ -1,6 +1,6 @@
-<!-- TAVA Registration Form -->
+<!-- daycare Registration Form -->
 <style>
-  .tava-registration-section {
+  .daycare-registration-section {
     max-width: 480px;
     margin: 2rem auto;
     padding: 2rem;
@@ -9,26 +9,26 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
-  .tava-registration-section h2 {
+  .daycare-registration-section h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     font-weight: bold;
     color: #222;
   }
-  .tava-registration-section p {
+  .daycare-registration-section p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     color: #555;
   }
-  .tava-registration-section label {
+  .daycare-registration-section label {
     display: block;
     margin-bottom: 0.4rem;
     font-size: 0.9rem;
     color: #333;
   }
-  .tava-registration-section input,
-  .tava-registration-section textarea,
-  .tava-registration-section select {
+  .daycare-registration-section input,
+  .daycare-registration-section textarea,
+  .daycare-registration-section select {
     width: 100%;
     padding: 0.65rem;
     margin-bottom: 1.1rem;
@@ -37,11 +37,11 @@
     font-size: 1rem;
     font-family: inherit;
   }
-  .tava-registration-section textarea {
+  .daycare-registration-section textarea {
     resize: vertical;
     min-height: 80px;
   }
-  .tava-registration-section button {
+  .daycare-registration-section button {
     width: 100%;
     padding: 0.85rem;
     background: #0a4a78;
@@ -51,43 +51,59 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  .tava-registration-section button:hover {
+  .daycare-registration-section button:hover {
     background: #083d64;
   }
 </style>
 
-<section class="tava-registration-section">
-  <h2>Register for TAVA</h2>
-  <p>Please fill in the details below to register your child for TAVA programs.</p>
-  <form action="https://formspree.io/f/mzdabedd" method="POST">
+<section class="daycare-registration-section">
+  <h2>Register for Daycare pickup service</h2>
+  <p>Please fill in the details below to register your child for daycare pickups</p>
+  <form action="https://formspree.io/f/meelzdnk" method="POST">
     
     <label for="parent_name">Parent's Name</label>
     <input type="text" id="parent_name" name="parent_name" required placeholder="Parent's full name">
 
     <label for="student_name">Student's Name</label>
     <input type="text" id="student_name" name="student_name" required placeholder="Student's full name">
+    <label for="pickup">Child's Pickup:</label>
+
+    <input
+  type="time"
+  id="pickup"
+  name="Pickup"
+  min="13:00"
+  max="14:30"
+  required />
+
+<small>Bus pickup times from 13:00 to  14:30</small>
+
 
     <label for="level">Level in School</label>
     <select id="level" name="level" required>
       <option value="">Select level</option>
+      <option value="Kindergarden 1">Kindergarden 1</option>
+      <option value="Kindergarden 2">Kindergarden 2</option>
       <option value="Primary 1">Primary 1</option>
       <option value="Primary 2">Primary 2</option>
       <option value="Primary 3">Primary 3</option>
       <option value="Primary 4">Primary 4</option>
       <option value="Primary 5">Primary 5</option>
       <option value="Primary 6">Primary 6</option>
-      <option value="Secondary 1">Secondary 1</option>
-      <option value="Secondary 2">Secondary 2</option>
-      <option value="Secondary 3">Secondary 3</option>
-      <option value="Secondary 4">Secondary 4</option>
-      <option value="Secondary 5">Secondary 5</option>
+    </select>
+    <label for="daycare-location">Daycare</label>
+    <select id="daycare-location" name="daycare-location" required>
+      <option value="">Select daycare</option>
+      <option value="Place 1 (address)">Place 1 (address)</option>
+      <option value="Place 2 (address)">Place 2 (address)</option>
+      <option value="Place 3 (address)">Place 3 (address)</option>
     </select>
 
-    <label for="unit">Unit Number</label>
-    <input type="text" id="unit" name="unit" required placeholder="Unit/Apartment number">
+    <label for="Address">Address</label>
+    <input type="text" id="Address" name="Address" required placeholder="Address">
 
     <label for="contact">Contact</label>
-    <input type="text" id="contact" name="contact" required placeholder="Phone or email">
+    <input type="text" id="Phone Number" name="Phone Number" required placeholder="Phone Number">
 
     <label for="notes">Additional Notes (optional)</label>
     <textarea id="notes" name="notes" placeholder="Any special instructions or notes"></textarea>
@@ -95,3 +111,4 @@
     <button type="submit">Register</button>
   </form>
 </section>
+
